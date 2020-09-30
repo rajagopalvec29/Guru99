@@ -25,8 +25,9 @@ class Test_002_loginDD:
                 XLUtility.writedata(self.path, 'Sheet1', rw, 3, 'Login Fail')
             except:
                 time.sleep(2)
+                self.driver.save_screenshot('.\\Screenshots\\login'+str(rw)+'.png')
                 lp.Clicklogout()
-                time.sleep(1)
+                time.sleep(2)
                 alert = self.driver.switch_to.alert
                 alert.accept()
                 XLUtility.writedata(self.path, 'Sheet1', rw, 3, 'Login Pass')
