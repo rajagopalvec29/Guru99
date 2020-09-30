@@ -1,0 +1,1 @@
+pytest -v -s --html=Reports/report.html TestCases/test_loginDDexcel.py
